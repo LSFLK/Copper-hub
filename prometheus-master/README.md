@@ -6,6 +6,7 @@
 To quickly start all the things just do this:
 
 -- kubectl apply --filename manifests-all.yaml
+-- kubectl apply --filename grafana.yaml
 
 This will create the namespace `monitoring` and bring up all components in there.
 
@@ -59,4 +60,4 @@ See grafana.net for some example [dashboards](https://grafana.net/dashboards) an
 
 ## Credit
 
-Alertmanager configs and integration in this repository was heavily inspired by the implementation in [kayrus/prometheus-kubernetes](https://github.com/kayrus/prometheus-kubernetes).
+Alertmanager configs and integration in this repository was heavily inspired by the implementation in [kayrus/prometheus-kubernetes](https://github.com/kayrus/prometheus-kubernetes) and [giantswarm/prometheus-kubernetes](https://github.com/giantswarm/prometheus)

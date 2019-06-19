@@ -16,11 +16,47 @@
   "editable": true,
   "gnetId": 737,
   "graphTooltip": 0,
-  "id": 2,
-  "iteration": 1560859911720,
+  "id": 1,
+  "iteration": 1560946394013,
   "links": [],
   "panels": [
     {
+      "alert": {
+        "alertRuleTags": {},
+        "conditions": [
+          {
+            "evaluator": {
+              "params": [
+                8
+              ],
+              "type": "lt"
+            },
+            "operator": {
+              "type": "and"
+            },
+            "query": {
+              "params": [
+                "A",
+                "10s",
+                "now"
+              ]
+            },
+            "reducer": {
+              "params": [],
+              "type": "avg"
+            },
+            "type": "query"
+          }
+        ],
+        "executionErrorState": "alerting",
+        "for": "10s",
+        "frequency": "1m",
+        "handler": 1,
+        "message": "Pod count decreased",
+        "name": "Pod count alert",
+        "noDataState": "alerting",
+        "notifications": []
+      },
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
@@ -65,7 +101,15 @@
           "refId": "A"
         }
       ],
-      "thresholds": [],
+      "thresholds": [
+        {
+          "colorMode": "critical",
+          "fill": true,
+          "line": true,
+          "op": "lt",
+          "value": 8
+        }
+      ],
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
@@ -1735,7 +1779,6 @@
       {
         "allValue": null,
         "current": {
-          "tags": [],
           "text": "copper",
           "value": [
             "copper"
@@ -1763,7 +1806,7 @@
     ]
   },
   "time": {
-    "from": "now-3d",
+    "from": "now-15m",
     "to": "now"
   },
   "timepicker": {
@@ -1794,5 +1837,5 @@
   "timezone": "browser",
   "title": "Kubernetes Pod Resources",
   "uid": "VW1dXd7Zk",
-  "version": 78
+  "version": 3
 }
