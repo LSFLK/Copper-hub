@@ -24,4 +24,6 @@ kubectl delete namespace grafana
 
 After installing, it is must to create a datasource in grafana as "prometheus" and local URL would be "http://prometheus.monitoring.svc.cluster.local:9090/".
 
+Import the grafana dashboard from "/prometheus-master/grafana_dashboards/dashboard_1.json" to grafana.
+
 Then create a "Notification channel" to make sure that alert mails will receive for the right address.
