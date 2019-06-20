@@ -12,7 +12,9 @@ kubectl apply --filename manifests-all.yaml
 kubectl apply --filename grafana.yaml
 ``` 
 
-This will create the namespaces `monitoring` and `grafana` and will bring up all components in there.
+This will create the namespaces `monitoring` and `grafana` and will bring up all components there.
+
+Use port 3000 to access grafana.
 
 To shut down all components again you can just delete that namespace:
 
