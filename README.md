@@ -31,6 +31,17 @@ After installing, it is must to create a datasource in grafana as "prometheus" a
   - `Url`: `http://prometheus.monitoring.svc.cluster.local:9090/`
   - `Add`
 
-Import the grafana dashboard from "/prometheus-master/grafana_dashboards/dashboard_1.json" to grafana.
+Import the grafana dashboard from "/prometheus-master/grafana_dashboards/dashboard_1.json" to grafana.<br/>
+- Import grafana dashboard.<br/>
+`Dashboards / Manage / import`
+  - `Name`: `Kubernetes Pod Resources`
+  - `Location`: `/prometheus-master/grafana_dashboards/dashboard_1.json`
+  - `import`
 
-Then create a "Notification channel" to make sure that alert mails will receive for the right address.
+Then create a "Notification channel" to make sure that alert mails will receive for the right address.<br/>
+- Create Notification channel.<br/>
+`Alerting / Notification channels / New channel`
+  - `Name`: `Email`
+  - `Type`: `Email`
+  - `Email addresses`: `Your email address`
+  - `import`
