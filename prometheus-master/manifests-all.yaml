@@ -502,7 +502,8 @@ metadata:
   annotations:
     prometheus.io/scrape: 'true'
 spec:
-  type: NodePort
+  # type: NodePort
+  type: LoadBalancer
   ports:
     - port: 9090
       # targetPort: 9091
