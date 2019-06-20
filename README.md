@@ -1,15 +1,20 @@
 # Copper-hub
 
-This repository contains source code for copper-hub which is the alerting, monitoring and update handling system for Copper
+This repository contains source code for copper-hub which is the alerting, monitoring and update handling system for Copper. 
+
+First, create grafana docker image using ./grafana-image/Dockerfile. (Read the ./grafana-image/README.md before building image)
+```
+docker build -t graf .
+```
 
 ## Quick start
 
 To quickly start all the things just do this:
 
 ``` 
-kubectl apply --filename manifests-all.yaml
+kubectl apply --filename ./prometheus-master/manifests-all.yaml
 
-kubectl apply --filename grafana.yaml
+kubectl apply --filename ./prometheus-master/grafana.yaml
 ``` 
 
 This will create the namespaces `monitoring` and `grafana` and will bring up all components there.
@@ -33,7 +38,7 @@ After installing, it is must to create a datasource in grafana as "prometheus" a
   - `Url`: `http://prometheus.monitoring.svc.cluster.local:9090/`
   - `Add`
 
-Import the grafana dashboard from "/prometheus-master/grafana_dashboards/dashboard_1.json" to grafana.<br/>
+Import the grafana dashboard from "./prometheus-master/grafana_dashboards/dashboard_1.json" to grafana.<br/>
 - Import grafana dashboard.<br/>
 `Dashboards / Manage / import`
   - `Name`: `Kubernetes Pod Resources`
