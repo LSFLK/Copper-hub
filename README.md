@@ -7,6 +7,7 @@ This repository contains source code for copper-hub which is the alerting, monit
 To quickly start all the things just do this:
 
 -- kubectl apply --filename manifests-all.yaml
+
 -- kubectl apply --filename grafana.yaml
 
 This will create the namespaces `monitoring` and `grafana` and will bring up all components in there.
